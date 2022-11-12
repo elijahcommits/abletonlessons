@@ -9,30 +9,41 @@ import MyWork from '../components/sections/MyWork.astro';
 		<h1 class="title">Ableton Lessons by <span class="text-gradient">Elijah</span></h1>
 		<p class="subtitle noselect">Learn to produce music like the pros!</p>
 		
+		<br>
+
 		<MyWork />
 
-		<h2>Payment options</h2>
-			<ul>
-				<li>Cash App</li>
-				<li>Venmo</li>
-				<li>PayPal</li>
-				<li>Crypto</li>
-			</ul>
+		<br>
+
+		<section>
+			<h2>Payment options</h2>
+				<ul>
+					<li>Cash App</li>
+					<li>Venmo</li>
+					<li>PayPal</li>
+					<li>Crypto</li>
+				</ul>
+		</section>
 		
-		<h2>Video options</h2>
-			<ul>
-				<li>Zoom</li>
-				<li>Google Meet (Duo)</li>
-				<li>Skype</li>
-			</ul>
+		<section>
+			<h2>Video options</h2>
+				<ul>
+					<li>Zoom</li>
+					<li>Google Meet (Duo)</li>
+					<li>Skype</li>
+				</ul>
+		</section>
 
-		<h2>Screen-sharing options</h2>
-			<ul>
-				<li>AnyDesk</li>
-				<li>TeamViewer</li>
-			</ul>
+		<section>
+			<h2>Screen-sharing options</h2>
+				<ul>
+					<li>AnyDesk</li>
+					<li>TeamViewer</li>
+				</ul>
+		</section>
+		<br>
 
-		<ContactMe />
+		<ContactMe class=".section" />
 
 	</main>
 </Layout>
@@ -85,4 +96,5 @@ import MyWork from '../components/sections/MyWork.astro';
 		/* color: hsl(0, 0%, 5%); */
 		text-shadow: white 1px 0 10px, white -1px 0 5px;
 	}
+
 </style>
