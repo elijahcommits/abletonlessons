@@ -1,34 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import SocialLinkCard from '../components/SocialLinkCard.astro';
+import ContactMe from '../components/sections/ContactMe.astro';
+import MyWork from '../components/sections/MyWork.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Ableton with Elijah">
 	<main>
 		<h1 class="title">Ableton Lessons by <span class="text-gradient">Elijah</span></h1>
 		<p class="subtitle noselect">Learn to produce music like the pros!</p>
-		<!-- <p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p> -->
-		<h2 class="my_work_title">My work</h2>
-		<ul role="list" class="link-card-grid">
-			<SocialLinkCard
-				href="https://soundcloud.com/permafriday/tracks"
-				alt="Soundcloud logo"
-				src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZGF0YS1uYW1lPSJMYXllciAxIiBpZD0iTGF5ZXJfMSIgdmlld0JveD0iMCAwIDEyOCAxMjgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlLz48cGF0aCBkPSJNNDcuNjMsNzguMzksNTguODIsNTlhMi4zOCwyLjM4LDAsMCwxLDQuMTIsMEw3NS4yOSw4MC4zOEEyLjM4LDIuMzgsMCwwLDEsNzMuMjMsODRINTEuOTJhMy41NSwzLjU1LDAsMCwwLTMuMDgsMS43OGwtOC4zMiwxNC40MWEyLjM3LDIuMzcsMCwwLDAsMi4wNiwzLjU2aDY0Ljg2YTIuMzcsMi4zNywwLDAsMCwyLjA2LTMuNTZMNjIuOTQsMTkuNDlhMi4zOCwyLjM4LDAsMCwwLTQuMTIsMGwtMzMsNTcuMTJhMi4zOCwyLjM4LDAsMCwwLDIuMDYsMy41Nkg0NC41NEEzLjU4LDMuNTgsMCwwLDAsNDcuNjMsNzguMzlaIi8+PC9zdmc+"
-			/>
-			<SocialLinkCard
-				href="https://permafriday.bandcamp.com/album/scaryforest"
-				alt="Bandcamp logo"
-				src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDUxMiA1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTI1Niw4QzExOSw4LDgsMTE5LDgsMjU2UzExOSw1MDQsMjU2LDUwNCw1MDQsMzkzLDUwNCwyNTYsMzkzLDgsMjU2LDhabTQ4LjIsMzI2LjFoLTE4MUwyMDcuOSwxNzhoMTgxWiIvPjwvc3ZnPg=="
-			/>
-			<SocialLinkCard
-				href="https://soundcloud.com/permafriday/tracks"
-				alt="Soundcloud logo"
-				src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaWQ9Ikljb25zIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMiAzMjsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDMyIDMyIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48Zz48cGF0aCBkPSJNMjYsMjVIMTZjLTAuNiwwLTEtMC40LTEtMVY4LjFjMC0wLjUsMC40LTAuOSwwLjktMUMxNi4zLDcsMTYuNyw3LDE3LDdjMy4yLDAsNi40LDIuNyw3LjUsNi4yYzAuNS0wLjEsMS0wLjIsMS41LTAuMiAgIGMzLjMsMCw2LDIuNyw2LDZTMjkuMywyNSwyNiwyNXoiLz48L2c+PGc+PHBhdGggZD0iTTEzLDI1Yy0wLjYsMC0xLTAuNC0xLTFWMTBjMC0wLjYsMC40LTEsMS0xczEsMC40LDEsMXYxNEMxNCwyNC42LDEzLjYsMjUsMTMsMjV6Ii8+PC9nPjxnPjxwYXRoIGQ9Ik0xMCwyNGMtMC42LDAtMS0wLjQtMS0xdi03YzAtMC42LDAuNC0xLDEtMXMxLDAuNCwxLDF2N0MxMSwyMy42LDEwLjYsMjQsMTAsMjR6Ii8+PC9nPjxnPjxwYXRoIGQ9Ik03LDI1Yy0wLjYsMC0xLTAuNC0xLTFWMTNjMC0wLjYsMC40LTEsMS0xczEsMC40LDEsMXYxMUM4LDI0LjYsNy42LDI1LDcsMjV6Ii8+PC9nPjxnPjxwYXRoIGQ9Ik00LDI0Yy0wLjYsMC0xLTAuNC0xLTF2LTZjMC0wLjYsMC40LTEsMS0xczEsMC40LDEsMXY2QzUsMjMuNiw0LjYsMjQsNCwyNHoiLz48L2c+PGc+PHBhdGggZD0iTTEsMjNjLTAuNiwwLTEtMC40LTEtMXYtNGMwLTAuNiwwLjQtMSwxLTFzMSwwLjQsMSwxdjRDMiwyMi42LDEuNiwyMywxLDIzeiIvPjwvZz48L3N2Zz4="
-			/>
-		</ul>
+		
+		<MyWork />
 
 		<h2>Payment options</h2>
 			<ul>
@@ -51,18 +32,8 @@ import SocialLinkCard from '../components/SocialLinkCard.astro';
 				<li>TeamViewer</li>
 			</ul>
 
-		<h2 class="contact">Contact me!</h2>
-			<p class="contact_link">Email me: 
-				<a href="mailto:seldomrealized@gmail.com?subject = Ableton Lessons&body = Hello, I'd like to inquire about signing up for music production lessons.">
-				seldomrealized@gmail.com
-				</a>
-			</p>
+		<ContactMe />
 
-			<p class="contact_link">DM me: 
-				<a href="https://twitter.com/messages/compose?recipient_id=1503204511527038977" class="twitter-dm-button" data-screen-name="@permafriday">
-					@permafriday
-				</a>
-			</p>
 	</main>
 </Layout>
 
@@ -113,23 +84,5 @@ import SocialLinkCard from '../components/SocialLinkCard.astro';
 	.subtitle:hover {
 		/* color: hsl(0, 0%, 5%); */
 		text-shadow: white 1px 0 10px, white -1px 0 5px;
-	}
-	.link-card-grid {
-		display: grid;
-		/* grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr)); */
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1rem;
-		padding: 0;
-	}
-
-	@media (max-width: 400px) {
-		.link-card-grid {
-			grid-template-columns: 1fr;
-		}
-	}
-
-	.contact_link a {
-		text-decoration: none;
-		color: rgb(var(--accent))
 	}
 </style>
